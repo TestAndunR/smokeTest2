@@ -9,7 +9,7 @@ exports.handler = function (event, context, callback) {
 	// You must always end/destroy the DB connection after it's used
 	rds.query({
 		instanceIdentifier: 'smokeTest',
-		query: 'aaa',
+		query: 'INSERT INTO tests(Testno)VALUES("01")',
 		inserts: []
 	}, function (error, results, connection) {
 		if (error) {
